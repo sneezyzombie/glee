@@ -1,9 +1,33 @@
-%DMSans-Regular-400{
-    font-family: "DMSans-Regular", sans-serif;
+$default:#436372;
+$title: #1f2044;
+$clr:#7b7b7b;
+$heading:rgb(36, 63, 77);
+%txt{
+    @extend %Rubik-Regular-400;
+    font-size: 14px;
+    line-height: 32px;
+    color: $clr;
+}
+%title{
+    @extend %DMSans-Bold-700;
+        font-size: 16px;
+        line-height: 21px;
+        color: $title;
+}
+%Rubik-Regular-400{
+    font-family: "Rubik-Regular", sans-serif;
     font-weight: 400;
 }
 %Rubik-Medium-500{
     font-family: "Rubik-Medium", sans-serif;
     font-weight: 500;
 }
-$default:#436372;
+%DMSans-Regular-400{
+    font-family: "DMSans-Regular", sans-serif;
+    font-weight: 400;
+}
+%DMSans-Bold-700{
+    font-family: "DMSans-Bold", sans-serif;
+    font-weight: 700;
+}
+
