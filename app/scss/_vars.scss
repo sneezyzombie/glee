@@ -1,7 +1,7 @@
 $default:#436372;
 $title: #1f2044;
 $clr:#7b7b7b;
-$heading:rgb(36, 63, 77);
+$heading:#243f4d;
 %txt{
     @extend %Rubik-Regular-400;
     font-size: 14px;
@@ -31,3 +31,11 @@ $heading:rgb(36, 63, 77);
     font-weight: 700;
 }
 
+
+
+@function max($numbers...){
+@return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+@return m#{a}x(#{$numbers});
+}
