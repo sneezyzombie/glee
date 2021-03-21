@@ -3,7 +3,7 @@
 @import "reset";
 @import "libs";
 @import "global";
-.title{
+.heading{
     @extend %Rubik-Medium-500;
     color: $heading;
 }
@@ -282,6 +282,7 @@ ul.slick-dots{
     display: flex;
     justify-content: space-around;
     background-color: rgba(252, 215, 182, .2);
+    margin-bottom: 70px;
     &__item{
         max-width: 300px;
         padding-left: 80px;
@@ -333,7 +334,7 @@ ul.slick-dots{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
-    margin-top: 200px;
+    margin-top: 130px;
     &__item{
         width: 870px;
         background-color: rgba(252, 215, 182, .4);
@@ -397,6 +398,100 @@ ul.slick-dots{
         margin: 0 auto;
         width: 128px;
         height: 128px;
+    }
+}
+
+.filters{
+    margin: 0 auto;;
+    padding: 40px 0 100px;
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item + .filters__item{
+        margin-left: 30px;
+    }
+    &__btn{
+        border: none;
+        background-color: #fff;
+        @extend %DMSans-Bold-700;
+        font-size: 16px;
+        line-height: 24px;
+        color: $clr;
+        transition: all .2s;
+        outline: transparent;
+    }
+    &__btn:focus{
+        color: #191919;
+    }
+}
+
+.products-top{
+    &__inner{
+        display: grid;
+        width: 1170px;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr)
+    }
+    &__item{
+        text-align: center;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        margin-bottom: 100px;
+    }
+    &__img-box{
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
+        position: relative;
+    }
+    &__link-box{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 20px;
+        width: 160px;
+        opacity: 0;
+        transition: all .6s;
+    }
+    &__link-box__item{
+        path{
+            transition: all .6s;
+        }
+        padding-top: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        transition: all .6s;
+    }
+    &__link-box__item:hover{
+        background-color: #a3bac7;
+        path{
+            fill:#fff;
+        }
+    }
+    &__item-title{
+        font-size: 16px;
+        line-height: 40px;
+        color:$heading;
+        padding-top: 30px;
+        font-weight: 400;
+    }
+    &__price{
+        @extend %DMSans-Bold-700;
+        font-size: 16px;
+        line-height: 40px;
+        color: #a3bbc8;
+    }
+    &__img-box:hover{
+        .products-top__link-box{
+            opacity: 1;
+        }
     }
 }
 @import "media";

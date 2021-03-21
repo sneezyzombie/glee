@@ -17,3 +17,10 @@ body{
     max-width: 1770px;
     margin: 0 auto;
 }
+.title{
+    color: #191919;
+    font-size: 36px;
+    line-height: 48px;
+    @extend %DMSans-Bold-700;
+    text-align: center;
+}
