@@ -7,5 +7,6 @@ $(function(){
         fade:true,
     });
     var mixer = mixitup('.filters__btn');
-    var mixer = mixitup('.products-top__inner')
+    var mixer = mixitup('.products-top__inner');
+    var mixer = mixitup('.design__inner');
 });
