@@ -24,3 +24,30 @@ body{
     @extend %DMSans-Bold-700;
     text-align: center;
 }
+.breadcrumbs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item:first-child::before{
+        content: none;
+    }
+    &__item{
+        position: relative;
+    }
+    &__item::before{
+        content: "/";
+        position: absolute;
+        top: 2px;
+        left: 6px;
+        color: #979ba0;
+    }
+    &__item + .breadcrumbs__item{
+        padding-left: 22px;
+    }
+    &__link{
+        @extend %Rubik-Regular-400;
+        color: #979ba0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

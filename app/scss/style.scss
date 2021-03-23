@@ -331,11 +331,12 @@ ul.slick-dots{
         color: $clr;
     }
 }
-
-.products-bottom{
+.products-bottom__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.products-bottom{
     margin-bottom: 100px;
     margin-top: 130px;
     &__item{
@@ -390,7 +391,9 @@ ul.slick-dots{
     }
 }
 .video{
-    min-width: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1700px;
     background-image: url("../images/videobg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -593,10 +596,16 @@ ul.slick-dots{
             padding-left: 16px;
         }
     }
+    &--login{
+        margin-top: auto;
+        &::after{
+            height: 250px;
+        }
+    }
 }
 .sponsors__inner{
     padding: 90px 0 85px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 }
 .sponsors__list{
     display: flex;
@@ -631,6 +640,82 @@ ul.slick-dots{
             @extend %DMSans-Bold-700;
             font-size: 16px;
             color: #a3bbc8;
+        }
+    }
+}
+.top{
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #edf1f4;
+    margin-bottom: 120px;
+    &__title{
+        color: #222933;
+    @extend %Rubik-Regular-400;
+    font-weight: 300;
+    }
+    
+}
+.registration{
+    padding: 0 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 126px;
+    &__input{
+        margin-top: 16px;
+        width: 100%;
+        display: block;
+        height: 60px;
+        padding: 0 10px;
+        border: 2px solid #f6f6f6;
+    }
+    &__label{
+        margin-bottom: 40px;
+        color: #436372;
+        display: block;
+    }
+    &__btn{
+        width: 100%;
+        background-color: #a3bbc8;
+        border: none;
+        color: #fff;
+        padding: 14px 214px;
+    }
+    &__under__login{
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %Rubik-Regular-400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #436372;
+        border-bottom: 2px solid #f6f6f6;
+    }
+    &__link{
+        font-size: inherit;
+        color: inherit;
+        font-style: inherit;
+    }
+    &__txt{
+        @extend %Rubik-Regular-400;
+        color: #436372;
+        padding: 34px 0 26px;
+        text-align: center;
+    }
+    &__btn-link{
+        display: block;
+        width: 100%;
+        border: 2px solid #a3bbc8;
+        background-color: #fff;
+        color: $heading;
+        @extend %Rubik-Medium-500;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 20px 0;
+        text-align: center;
+        &::after{
+            content: none;
         }
     }
 }
