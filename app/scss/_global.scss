@@ -51,3 +51,30 @@ body{
         line-height: 22px;
     }
 }
+.pagination{
+    &--productlist1{
+        grid-column: 2;
+    }
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item + .pagination__item{
+        margin-left: 20px;
+    }
+    &__link{
+        display: inline-block;
+        padding: 13px 20px;
+        color: $heading;
+        border:1px solid #a3bbc8;
+        @extend %Rubik-Regular-400;
+        &--active{
+            background-color: #a3bbc8;
+            color: #fff;
+        }
+    }
+}
