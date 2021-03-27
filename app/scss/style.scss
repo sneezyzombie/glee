@@ -522,6 +522,7 @@ ul.slick-dots{
     }
     &__top{
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 50px;
     }
@@ -949,4 +950,242 @@ ul.slick-dots{
         }
     }
 }
+
+.mission{
+    &__inner{
+        margin: 0 auto;
+        max-width: 1170px;
+        display: flex;
+        margin-bottom: 120px;
+    }
+    &__content{
+        padding:80px 0 90px 30px;
+
+    }
+    &__years{
+        display: flex;
+        &__num{
+            font-size: 140px;
+            @extend %Rubik-Medium-500;
+            font-weight: 700;
+            color: #a3bbc8;
+        }
+        &__txt__item + .mission__years__txt__item{
+            padding-top: 20px;
+        }
+    }
+    &__title{
+        @extend %DMSans-Bold-700;
+        color: $heading;
+        font-size: 36px;
+        line-height: 32px;
+        margin-bottom: 50px;
+    }
+    &__txt{
+        margin-bottom: 70px;
+    }
+    &__achivments{
+        border-top:3px solid #e6eaf0;
+        display: flex;
+        justify-content: space-between;
+    &__item{
+        display: flex;
+        flex-flow: column;
+        padding-left: 60px;
+        position: relative;
+    &-projects::before{
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 35px;
+        height: 38px;
+        background-image: url("../images/projects.svg");
+    }
+    &-prevenue::before{
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        background-repeat: no-repeat;
+        width: 45px;
+        height: 40px;
+        background-image: url("../images/prevenue.svg");
+    }
+    &-awards::before{
+        content: "";
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 43px;
+            height: 42px;
+            background-repeat: no-repeat;
+            background-image: url("../images/awards.svg");
+    }
+    }
+    &__num{
+        @extend %DMSans-Bold-700;
+        color: $heading;
+        font-size: 36px;
+        line-height: 38px;
+        margin-bottom: 10px;
+    }
+    &__txt{
+        @extend %DMSans-Bold-700;
+        color: #4c4c4c;
+        font-size: 16px;
+        line-height: 17px;
+    }
+    }
+}
+ul.mission__achivments{
+    padding-top: 40px;
+}
+ul.mission__years__txt{
+    padding-left: 45px;
+    margin-top: -44px;
+    margin-bottom: 50px;
+}
+ul.achivments{
+    display: flex;
+    justify-content: space-around;
+    padding: 86px 0;
+    align-items: center;
+    background-color: #fcd7b6;
+    margin-bottom: 120px;
+}
+.achivments__item{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.achivments__num{
+    display: block ;
+    margin: 20px 0 30px ;
+    @extend %DMSans-Bold-700;
+        color: $heading;
+        font-size: 36px;
+        line-height: 32px;
+}
+
+.team{
+    &__inner{
+        margin: 0 auto;
+        max-width: 1170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__txt-box{
+        max-width: 300px;
+    }
+    &__title{
+        @extend %DMSans-Bold-700;
+        color: $heading;
+        font-size: 36px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+    &__txt{
+        color: $heading;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 70px;
+        width: 302px;
+    }
+    &__btn-link{
+        @extend %DMSans-Bold-700;
+    }
+    &__img-box{
+        position: relative;
+        object-fit: cover;
+    }
+    &__info{
+        padding: 30px 20px;
+        background-color: #fff;
+        position: absolute;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        z-index: 1;
+        bottom: -50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        padding-left: 100px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+    }
+    &__item{
+        margin-bottom: 100px;
+        &__txt{
+            display: flex;
+            flex-flow: column
+        }
+        &__name{
+            @extend %DMSans-Bold-700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #436372;
+        }
+        &__position{
+            font-size: 16px;
+            line-height: 30px;
+            color: #565872;
+        }
+        &__links{
+            display: flex;
+            margin-left: 40px;
+        }
+        &__link + .team__item__link{
+            margin-left: 25px;
+        }
+        &__link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #f6f6f6;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.terms{
+    font-size: 16px;
+    line-height: 30px;
+    color: $heading;
+    @extend %Rubik-Regular-400;
+    &__inner{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__title{
+        @extend %Rubik-Medium-500;
+        font-size: 22px;
+        line-height: 40px;
+        color: $heading;
+        margin-bottom: 30px;
+    }
+    &__list-item{
+        margin-left: 16px;
+        font-size: 16px;
+        line-height: 30px;
+        color: $heading;
+        @extend %Rubik-Regular-400;
+    }
+    &__list-item + .terms__list-item{
+        margin-top: 30px;
+    }
+    &__info{
+        margin: 70px 0 120px;
+        &__txt + .terms__title{
+            margin-top: 70px;
+        }
+    }
+
+}
+
 @import "media";
