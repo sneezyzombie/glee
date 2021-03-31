@@ -1,5 +1,19 @@
 $(function(){
 
+  $(".related__inner").slick({
+    infinite:false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  });
+
+  $(".product-page__tab-link").on("click", function(a){
+    a.preventDefault();
+    $(".product-page__tab-link").removeClass("product-page__tab-link--active");
+    $(this).addClass("product-page__tab-link--active");
+    $(".product-page__tab__content").removeClass("product-page__tab__content--active");
+    $($(this).attr("href")).addClass("product-page__tab__content--active");
+  });
+
   $(".product-page__slider-main").slick({
     asNavFor: ".product-page__slider-sub",
     draggable: false,
