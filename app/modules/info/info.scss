@@ -1,0 +1,51 @@
+.info-block{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(252, 215, 182, .2);
+    margin-bottom: 70px;
+    &__item{
+        max-width: 300px;
+        padding-left: 80px;
+    }
+    &__title{
+        font-size: 18px;
+        line-height: 40px;
+        @extend %DMSans-Bold-700;
+        color: #414141;
+        position: relative;
+    }
+    &__item:nth-child(1) .info-block__title::before{
+        content: "";
+        width: 49px;
+        height: 49px;
+        position: absolute;
+        left: -78px;
+        top:10px;
+        background-image: url("../images/supbefore.svg");
+    }
+    &__item:nth-child(2) .info-block__title::before{
+        content: "";
+        width: 54px;
+        height:37px;
+        position: absolute;
+        left: -80px;
+        top:10px;
+        background-image: url("../images/delivbefore.svg");
+    }
+    &__item:nth-child(3) .info-block__title::before{
+        content: "";
+        width: 54px;
+        height:53px;
+        position: absolute;
+        left: -91px;
+        top:10px;
+        background-image: url("../images/cardbefore.svg");
+    }
+    &__txt{
+        font-size: 16px;
+        line-height: 30px;
+        @extend %DMSans-Regular-400;
+        color: $clr;
+    }
+}

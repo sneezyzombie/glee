@@ -6,7 +6,15 @@ const uglify = require("gulp-uglify");
 const browserSync = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const rename = require("gulp-rename");
+const nunjucksRender = require("gulp-nunjucks-render");
 
+function nunjucks() {
+    return src("app/*.njk")
+        .pipe(nunjucksRender())
+        .pipe(dest("app"))
+        .pipe(browserSync.stream())
+}
 
 function images(){
     return src("app/images/**/*.*")
@@ -25,13 +33,17 @@ function images(){
 }
 
 function styles (){
-    return src("app/scss/style.scss")
+    return src("app/scss/*.scss")
+    // return src("app/scss/style.scss"
         .pipe(scss({outputStyle: "compressed"}))
         .pipe(autoprefixer({
             overrideBrowserslist: ["last 10 version"],
-            grid:true,
+            grid: true,
         }))
-        .pipe(concat("style.min.css"))
+        // .pipe(concat("style.min.css"))
+        .pipe(rename({
+            suffix: ".min"
+        }))
         .pipe(dest("app/css"))
         .pipe(browserSync.stream())
 }
@@ -54,8 +66,10 @@ function scripts() {
 }
 
 function watching() {
-    watch(["app/scss/**/*.scss"], styles);
-    watch(["app/js/**/*.js", "!app/js/main.min.js" ], scripts);
+    watch(["app/**/*.scss"], styles);
+    // watch(["app/scss/**/*.scss"], styles);
+    watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
+    watch(["app/*.njk"], nunjucks);
     watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
 
@@ -87,5 +101,6 @@ exports.watching = watching;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
+exports.nunjucks = nunjucks;
 exports.build = series(cleanDist, images, build);
-exports.default =  parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);

@@ -1,0 +1,30 @@
+.design{
+    &__inner{
+        margin: 0 auto;
+        grid-gap: 35px 30px;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr );
+        padding-bottom: 130px;
+    }
+    &__item{
+        background-color: #f8f8f8;
+        max-width: 370px;
+        padding: 40px 0 100px 40px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-position: 85% 80%;
+        &__title{
+            max-width: 171px;
+            @extend %DMSans-Bold-700;
+            font-size: 20px;
+            color: #191919;
+            margin-bottom: 20px;
+        }
+        &__txt{
+            @extend %DMSans-Bold-700;
+            font-size: 16px;
+            color: #a3bbc8;
+        }
+    }
+}

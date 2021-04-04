@@ -1,0 +1,102 @@
+.articles{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fcd7b6;
+        opacity: 0.2;
+        height: 204px;
+        z-index: -1;
+    }
+    &__inner{
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__top-link{
+        @extend %DMSans-Bold-700;
+        font-size: 16px;
+        line-height: 1;
+        color: #262626;
+        padding-right: 25px;
+        position: relative;
+        &::after{
+            content: "";
+            width: 6px;
+            height: 11px;
+            background-image: url("../images/viewallarrow.svg");
+            position: absolute;
+            right: 0;
+            top: 1px;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        border-radius: 5px;
+        max-width: 370px;
+        background-color: #fff;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        &__img-box{
+            position: relative;
+            object-fit: cover;
+
+        }
+        &__mark{
+            position: absolute;
+            left: 30px;
+            bottom: -18px;
+            background-color: #a3bbc8;
+            border-radius: 25px;
+            padding: 10px 30px 8px;
+            z-index: 1;
+        }
+        &__img-box__link{
+            color: #fff;
+            @extend %DMSans-Bold-700;
+            font-size: 14px;
+            line-height: 1;
+        }
+        &__text-box{
+            padding: 35px 28px 28px;
+        }
+        &__text{
+            @extend %DMSans-Bold-700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #262626;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        &__info{
+            padding-top: 20px;
+            @extend %Rubik-Regular-400;
+            color: #222933;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__date{
+            margin-right: 30px;
+            padding-left: 16px;
+        }
+        &__autor{
+            padding-left: 16px;
+        }
+    }
+    &--low{
+        margin-top: auto;
+        &::after{
+            height: 250px;
+        }
+    }
+}
