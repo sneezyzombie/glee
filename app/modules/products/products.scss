@@ -1,15 +1,18 @@
 .products-top{
     &__inner{
         display: grid;
-        width: 1170px;
+        max-width: 1170px;
         margin: 0 auto;
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px 30px;
     }
     &__item{
         text-align: center;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        margin-bottom: 100px;
+        // margin-bottom: 100px;
         padding: 30px 0;
+        max-width: 270px;
+        width: 100%;
     }
     &__img-box{
         display: flex;
@@ -76,7 +79,8 @@
     margin-bottom: 100px;
     margin-top: 130px;
     &__item{
-        width: 870px;
+        max-width: 870px;
+        width: 100%;
         background-color: rgba(252, 215, 182, .4);
         position: relative;
     }
@@ -124,5 +128,79 @@
         right: 20px;
         top: 40%;
         background-repeat: no-repeat;
+    }
+}
+@media(max-width:1750px){
+    .products-bottom{
+        margin-bottom: 0;
+        &__inner{
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item{
+            margin-bottom: 120px;
+        }
+    }
+}
+@media(max-width:1070px){
+    .products{
+        &-top{
+            &__inner{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+@media(max-width:870px){
+     .products{
+        &-bottom{
+            &__title{
+                margin: 20px 0 10px;
+            }
+            &__btn-link{
+                margin-bottom: 20px;
+            }
+            margin: 30px 0;
+            &__img{
+                display: none;
+            }
+            &__item{
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            &__content{
+                margin: 0;
+                padding: 0;
+            }
+        }
+     }
+}
+@media(max-width:660px){
+    .products{
+        &-top{
+            &__inner{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+    }
+}
+@media(max-width:440px){
+    .products{
+        &-top{
+            &__inner{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            }
+            &__item{
+                margin-bottom: 10px;
+            }
+        }
     }
 }

@@ -58,3 +58,68 @@ ul.slick-dots{
 .slick-active button{
         opacity: 1 !important;
 }
+
+@media(max-width:1610px){
+    .top-slider{
+        &__img{
+            margin-right: 0;
+        }
+        &__wrapper{
+            background-position: 85% 65%;
+            padding-left: 150px;
+            padding-right: 200px;
+        }
+
+    }
+}
+@media(max-width:1290px){
+    .top-slider{
+        &__img{
+            margin-right: 130px;
+        }
+        &__title {
+            font-size: 56px;
+            line-height: 68px;
+        }
+        &__wrapper{
+            padding-left: 10px;
+            padding-right: 0;
+                background-position: 95% 65%;
+        }
+    }
+}
+@media(max-width:1070px){
+    .top-slider__img {
+        margin-top: 145px;
+        margin-right: 80px;
+        max-width: 50%;
+    }
+}
+@media(max-width:910px){
+    .top-slider{
+        &__img{
+            display: none !important;
+        }
+        &__content{
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__wrapper{
+            background-image: none;
+        }
+        &__title {
+            font-size: 48px;
+            line-height: 60px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    ul.slick-dots {
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+}

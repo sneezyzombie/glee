@@ -9,6 +9,7 @@
     }
     &__item{
         background-color: #f8f8f8;
+        width: 100%;
         max-width: 370px;
         padding: 40px 0 100px 40px;
         object-fit: cover;
@@ -25,6 +26,32 @@
             @extend %DMSans-Bold-700;
             font-size: 16px;
             color: #a3bbc8;
+        }
+    }
+}
+@media(max-width: 1200px){
+    .design{
+        &__inner{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 60px;
+        }
+    }
+}
+@media(max-width: 390px){
+    .design{
+        &__inner{
+            padding-bottom: 30px;
+        }
+        &__item{
+            background-image: none !important;
+            padding: 20px 0;
+            flex-flow: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

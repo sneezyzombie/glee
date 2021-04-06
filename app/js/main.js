@@ -72,8 +72,10 @@ $(function(){
         slidesToScroll:1,
         fade:true,
     });
-    var mixer = mixitup('.filters__btn');
-    var mixer = mixitup('.products-top__inner');
-    var mixer = mixitup('.design__inner');
-    var mixer = mixitup('.filters__btn');
+  // var mixitup = require('mixitup');
+  
+    var mixerOne = mixitup('.filters__btn');
+    var mixerOne = mixitup('.products-top__inner');
+    var mixerTwo = mixitup('.design__inner');
+    var mixerTwo = mixitup('.filters__btn');
 });

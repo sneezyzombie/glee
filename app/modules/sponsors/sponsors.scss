@@ -8,3 +8,18 @@
     align-items: center;
     justify-content: space-around;
 }
+@media(max-width:1200px){
+    .sponsors{
+        &__inner{
+                padding: 60px 0 45px;
+    margin-bottom: 30px;
+        }
+        &__list{
+            flex-flow: wrap;
+            &-item{
+                display: inline-block;
+                margin: 15px;
+            }
+        }
+    }
+}

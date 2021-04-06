@@ -6,6 +6,7 @@
     margin-bottom: 70px;
     &__item{
         max-width: 300px;
+        width: 100%;
         padding-left: 80px;
     }
     &__title{
@@ -20,7 +21,7 @@
         width: 49px;
         height: 49px;
         position: absolute;
-        left: -78px;
+        left: -80px;
         top:10px;
         background-image: url("../images/supbefore.svg");
     }
@@ -38,7 +39,7 @@
         width: 54px;
         height:53px;
         position: absolute;
-        left: -91px;
+        left: -80px;
         top:10px;
         background-image: url("../images/cardbefore.svg");
     }
@@ -47,5 +48,14 @@
         line-height: 30px;
         @extend %DMSans-Regular-400;
         color: $clr;
+    }
+}
+@media(max-width:1070px){
+    .info-block{
+        padding: 30px 5px;
+        flex-flow: wrap;
+        &__item{
+            margin: 20px;
+        }
     }
 }
