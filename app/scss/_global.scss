@@ -26,6 +26,7 @@ body{
 }
 .breadcrumbs{
     display: flex;
+    flex-flow: wrap;
     justify-content: center;
     align-items: center;
     &__item:first-child::before{
@@ -59,6 +60,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-flow: wrap;
     &__list{
         display: flex;
         align-items: center;
@@ -134,8 +136,13 @@ body{
         color: #191919;
     }
 }
-// @media(max-width: 1070px){
-//     .title{
-
-//     }
-// }
+@media(max-width: 1070px){
+    section.top{
+        margin-bottom: 80px;
+    }
+}
+@media(max-width: 840px){
+    section.top{
+        margin-bottom: 40px;
+    }
+}

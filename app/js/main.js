@@ -1,4 +1,7 @@
 $(function(){
+  $(".shop-filters__btn").on("click", function () {
+    $(".shop-left-sidebar").slideToggle()
+  });
 
   $(".menu__btn").on("click", function () {
     $(".menu__list").toggleClass("menu__list--active");
@@ -8,6 +11,28 @@ $(function(){
     infinite:false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 901,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 641,
+        settings: {
+          slidesToShow:2,
+        }
+      }
+    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 441,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     },
+    //   },
+    // ]
   });
 
   $(".product-page__tab-link").on("click", function(a){
